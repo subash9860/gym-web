@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gym</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <div class="topnav" id="myTopnav">
+      <a><strong>Gym</strong></a>
+      <a class="space"> </a>
+      <a href="#home" class="active">Home</a>
+      <a href="#bmi">BMI</a>
+      <a href="#email">Send Email</a>
+      <a href="#about-us">About us</a>
+      <a href="#contract">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="navigationToggle()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- hero -->
+    <section id="hero">
+      <div class="container">
+        <h2><em>Welcome to Gym</em></h2>
+        <p>
+          We offer a wide range of services to help you reach your fitness goals
+        </p>
+        <a href="#training" class="btn">Learn More</a>
+      </div>
+    </section>
+
+    <!-- training -->
+    <section id="training">
+      <div class="container">
+        <h2 class="text-center">Training Programs</h2>
+        <p class="text-center">
+          We offer a variety of training programs to help you reach your fitness
+          goals.
+        </p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                class="card-img-top"
+                alt="Personal Training"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Personal Training</h3>
+                <p class="card-text">
+                  Our personal trainers are certified professionals who will
+                  work with you one-on-one to create a customized workout plan
+                  that meets your specific needs and goals.
+                </p>
+                <a href="#hero" class="btn btn-primary">More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1564282350350-a8355817fd2e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                class="card-img-top"
+                alt="Group Training"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Group Training</h3>
+                <p class="card-text">
+                  Our group training classes are led by experienced trainers and
+                  are designed to provide a challenging and supportive workout
+                  environment for people of all fitness levels.
+                </p>
+                <a href="#hero" class="btn btn-primary">More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1586439496903-c96e9f18f212?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG9ubGluZSUyMHRyYWluaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                class="card-img-top"
+                alt="Online Training"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Online Training</h3>
+                <p class="card-text">
+                  Our online training program allows you to access personalized
+                  workout plans and receive feedback and support from our
+                  trainers from the comfort of your own home.
+                </p>
+                <a href="#hero" class="btn btn-primary">More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bmi-email">
+      <div class="row">
+        <!-- For Bmi Calculation -->
+        <div class="col-md-4" id="bmi">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">BMI Calculation</h3>
+              <form>
+                <p class="card-text">
+                  <label>Height in CM: </label
+                  ><input type="text" id="height" /><br>
+                  <label>Weight in KG: </label><input type="text" id="weight" /><br>
+                  <button class="btn">Calculate</button>
+                </p>
+              </form>
+              <div id="results"></div>
+              <div id="error"></div>
+              <div id="weight-guide">
+                <h3>BMI Weight Guide</h3>
+                <p>Under Weight = Less than 18.6</p>
+                <p>Normal Range = 18.6 and 24.9</p>
+                <p>Overweight = Greater than 24.9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Send email -->
+        <div class="col-md-4" id="email">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Send Email</h3>
+              <form
+                action="mailto:someone@gmail.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <p class="card-text">
+                  <label> Name: </label>
+                  <input type="text" name="name" /><br /><br />
+                  <label> Email: </label>
+                  <input type="text" name="email" /><br /><br />
+                  <label>Message:</label>
+                  <input type="text" name="message" /><br /><br />
+                </p>
+                <button type="submit" value="Send" class="btn">send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About us -->
+    <section id="about-us">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-description">
+              At our Gym, we are dedicated to helping our members reach their
+              fitness goals through a combination of state-of-the-art equipment,
+              experienced trainers, and a supportive community.
+            </p>
+            <a href="#hero" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contract">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Contact Us</h3>
+            <p>123 Main St.</p>
+            <p>Anytown, AUS</p>
+            <p>555-555-5555</p>
+            <p>info@gym.com</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Connect With Us</h3>
+            <ul class="list-inline">
+              <li>
+                <a href="#hero">Facebook</a>
+              </li>
+              <li>
+                <a href="#hero">Twitter</a>
+              </li>
+              <li>
+                <a href="#hero">Instagram</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>About Us</h3>
+            <p>
+              We are a locally owned and operated gym that is dedicated to
+              helping our members reach their fitness goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- add external JavaScript File -->
+  <script src="index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Scroll animation -->
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
+</html>
